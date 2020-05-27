@@ -20,7 +20,10 @@
 # 1. Questions and Objectives
 # 2. Defining a Function
 # 3. Composing Functions
-# 4. place Hodor
+# 4. Nesting Functions
+# 5. Creating Functions
+
+# X. place Hodor
 
 
 
@@ -121,15 +124,36 @@ fahrenheit_to_kelvin(32.0)
 celsius_to_kelvin(fahrenheit_to_celsius(32.0))
 
 
+#*********************************
+# 5. Creating Functions
+#*********************************
 
+# Usual method of combining elements --the concatenate function, c()
+# Example: 
+x <- c("A", "B", "C") 
+# creates a vector x with three elements. 
+# can extend that vector again using c, e.g. 
+y <- c(x, "D") 
+# creates a vector y with four elements. 
+  
+# Exercise Direction
+# Write a function called highlight
+# takes two vectors as arguments, 
+#         called content and wrapper,
+#     returns a new vector that has the wrapper vector at the beginning and end of the content:
 
+best_practice <- c("Write", "theprograms", "for", "youpeople", "not", "computers")
+asterisk <- "***"  # why three ??? R interprets a variable with a single value 
+#                                   as a vector with one element.
+highlight(best_practice, asterisk)
 
+highlight <- function(best_practice, asterisk) {
+  best_practice <- c("Write", "theprograms", "for", "youpeople", "not", "computers")
+  asterisk <- "***"
+  return(highlight)
+}
 
-
-
-
-
-
+highlight
 
 
 
