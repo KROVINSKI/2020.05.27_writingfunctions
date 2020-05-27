@@ -10,7 +10,7 @@
 #*********************************
 ##Libraries
 #********************************* 
-
+# none to date 2020.05.27
 
 
 #*********************************
@@ -18,14 +18,9 @@
 #********************************* 
 
 # 1. Questions and Objectives
-# 2. placeholder
-# 3. placeholder
+# 2. Defining a Function
+# 3. Composing Functions
 # 4. place Hodor
-
-
-
-
-
 
 
 
@@ -49,11 +44,57 @@
 #*********************************
 # 2. Defining a Function
 #*********************************
+# defining a function
+# fahrenheit to celsius
+
+fahrenheit_to_celsius <- function(temp_F) {
+  temp_C <- (temp_F - 32) * 5 / 9
+  return(temp_C)
+}
+
+## Function Box Breakdown ## - - - - - - - - - - - | - - - - - - | 
+# (element)................ (Result)...............| Syntax tool |
+# OUTPUT...................  fahrenheit_to_celsius | <-          |
+# ARGUMENT name............  temp_F                | (inside)    |
+# BODY (statements)........  temp_C <-(temp_F...)..| {inside}    |
+
+
+#We define fahrenheit_to_celsius by assigning it to the output of function
+# The list of argument names are contained within parentheses. 
+# body of the function–the statements
+#                     executed when it runs–is contained 
+#                     within curly braces ({}).
+
+# When we call the function, 
+#       the values we pass to it are assigned to those variables 
+#       so that we can use them inside the function. Inside the function, 
+#       we use a return statement to send a result back to whoever asked for it.
+
+
+fahrenheit_to_celsius <- function(temp_F) {
+  temp_C <- (temp_F - 32) * 5 / 9
+  return(temp_C)
+}
+
+fahrenheit_to_celsius(32)
 
 
 
+#*********************************
+# 3. Composing Functions
+#*********************************
+# Now that we’ve seen how to turn 
+# Fahrenheit into Celsius, 
+# it’s easy to turn Celsius into Kelvin:
 
 
+celsius_to_kelvin <- function(temp_C) {
+  temp_K <- temp_C + 273.15
+  return(temp_K)
+}
+
+# freezing point of water in Kelvin
+celsius_to_kelvin(0)
 
 
 
