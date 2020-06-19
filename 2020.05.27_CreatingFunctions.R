@@ -142,9 +142,11 @@ y <- c(x, "D")
 #         called content and wrapper,
 #     returns a new vector that has the wrapper vector at the beginning and end of the content:
 
-best_practice <- c("Write", "theprograms", "for", "youpeople", "not", "computers")
-asterisk <- "***"  # why three ??? R interprets a variable with a single value 
-#                                   as a vector with one element.
+
+
+best_practice <- c("Write", "programs", "for", "people", "not", "computers")
+asterisk <- "***"  # R interprets a variable with a single value as a vector
+# with one element.
 highlight(best_practice, asterisk)
 
 highlight <- function(best_practice, asterisk) {
@@ -155,6 +157,14 @@ highlight <- function(best_practice, asterisk) {
 
 highlight
 
+
+highlight <- function(content, wrapper) {
+  answer <- c(wrapper, content, wrapper)
+  return(answer)
+}
+
+
+highlight(best_practice, asterisk)
 
 
 
